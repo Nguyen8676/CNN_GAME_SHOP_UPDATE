@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.875" name="dbQLBangame">
+  <DataContextMoniker Name="/dbQLBangameDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4cccf320-b64a-4744-a621-54fe15f53f75" absoluteBounds="6.75, 7.25, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/dbQLBangameDataContext/AVARTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a75848a-53c6-4eeb-ad39-ab38705a3842" absoluteBounds="6.765, 7.71, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b2505c7-fb4a-4eea-9732-416d343c9259" absoluteBounds="6.25, 4, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQLBangameDataContext/CT_DONHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3c3a866-715c-459c-a3b1-20ca4d41d497" absoluteBounds="6.265, 4.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a1273f7-37c1-4702-90a4-b8268cd8a191" absoluteBounds="6.25, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbQLBangameDataContext/DON_HANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7be71754-1335-46e1-b196-3acef63da2f0" absoluteBounds="6.265, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9756a93e-c06d-43e0-b09e-483834fa35c5" absoluteBounds="3.5, 3.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/dbQLBangameDataContext/GAME" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d260a3bd-e722-4ea0-96aa-717f4e5648de" absoluteBounds="3.515, 3.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b310d953-5319-4726-83dc-206e56b47bbb" absoluteBounds="3.5, 7.875, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/dbQLBangameDataContext/KHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f7c33ab-9c4c-41e1-b700-9b90d24febf6" absoluteBounds="3.515, 8.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b7a88d71-3168-4aab-9542-d4dd4df030c4" absoluteBounds="6.75, 9.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/dbQLBangameDataContext/LIEN_HE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0013651f-1cb8-404a-a4e7-bf8dd6da02ec" absoluteBounds="6.765, 9.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc7bc93e-7e30-4100-897a-b30a4f48300a" absoluteBounds="0.75, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQLBangameDataContext/NHA_PHAT_HANH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1dc3a0dc-4dff-4eb8-96e8-a1389369d717" absoluteBounds="0.765, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aeb95e9b-44c6-4c11-8e0f-a9fad10ac67c" absoluteBounds="0.75, 6.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQLBangameDataContext/NHA_PHAT_TRIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38e38dd8-e281-4c73-be4d-8c157a392925" absoluteBounds="0.765, 6.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="467dfaee-6a1e-4b66-b795-3bd623dd6d2b" absoluteBounds="0.75, 4.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/dbQLBangameDataContext/THE_LOAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87bfce88-6929-46ee-9d2f-1871f902a542" absoluteBounds="0.765, 4.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 2.90549967447917); (7.25 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBangameDataContext/DON_HANG/DON_HANG_CT_DONHANG" />
+      <nodes>
+        <classShapeMoniker Id="0a1273f7-37c1-4702-90a4-b8268cd8a191" />
+        <classShapeMoniker Id="7b2505c7-fb4a-4eea-9732-416d343c9259" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.78929768880208); (5.79166666666667 : 4.78929768880208 : JumpStart); (5.95833333333333 : 4.78929768880208 : JumpEnd); (6.25 : 4.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBangameDataContext/GAME/GAME_CT_DONHANG" />
+      <nodes>
+        <classShapeMoniker Id="9756a93e-c06d-43e0-b09e-483834fa35c5" />
+        <classShapeMoniker Id="7b2505c7-fb4a-4eea-9732-416d343c9259" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 3.5); (4.5 : 1.82774983723958); (6.25 : 1.82774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBangameDataContext/GAME/GAME_DON_HANG" />
+      <nodes>
+        <classShapeMoniker Id="9756a93e-c06d-43e0-b09e-483834fa35c5" />
+        <classShapeMoniker Id="0a1273f7-37c1-4702-90a4-b8268cd8a191" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.875); (5.875 : 7.5); (5.875 : 2.39787675585937); (6.25 : 2.39787675585937)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBangameDataContext/KHACHHANG/KHACHHANG_DON_HANG" />
+      <nodes>
+        <classShapeMoniker Id="b310d953-5319-4726-83dc-206e56b47bbb" />
+        <classShapeMoniker Id="0a1273f7-37c1-4702-90a4-b8268cd8a191" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.66429768880208); (3.9687475 : 2.66429768880208); (3.9687475 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBangameDataContext/NHA_PHAT_HANH/NHA_PHAT_HANH_GAME" />
+      <nodes>
+        <classShapeMoniker Id="cc7bc93e-7e30-4100-897a-b30a4f48300a" />
+        <classShapeMoniker Id="9756a93e-c06d-43e0-b09e-483834fa35c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.03929768880208); (4.5 : 7.03929768880208); (4.5 : 6.23240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBangameDataContext/NHA_PHAT_TRIEN/NHA_PHAT_TRIEN_GAME" />
+      <nodes>
+        <classShapeMoniker Id="aeb95e9b-44c6-4c11-8e0f-a9fad10ac67c" />
+        <classShapeMoniker Id="9756a93e-c06d-43e0-b09e-483834fa35c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.84699625651042); (3.5 : 4.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBangameDataContext/THE_LOAI/THE_LOAI_GAME" />
+      <nodes>
+        <classShapeMoniker Id="467dfaee-6a1e-4b66-b795-3bd623dd6d2b" />
+        <classShapeMoniker Id="9756a93e-c06d-43e0-b09e-483834fa35c5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

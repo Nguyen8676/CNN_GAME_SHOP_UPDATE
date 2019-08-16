@@ -1,0 +1,19 @@
+﻿@model  IEnumerable<Webbangame.Models.NHA_PHAT_HANH>
+<p class="lead">Nhà Phát Hành Game</p>
+<style>
+    .list-group-item:hover {
+        color: white;
+    }
+
+    .list-group-item {
+        background-color: black;
+    }
+</style>
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("SPTheoNhaPhatHanh","GameStore",new {id=item.MaNPH })" class="list-group-item"  style="color:cornflowerblue">
+            @item.TenNPH
+        </a>
+    }  
+</div>

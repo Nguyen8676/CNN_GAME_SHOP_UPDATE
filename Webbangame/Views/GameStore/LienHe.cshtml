@@ -1,0 +1,29 @@
+﻿@model  IEnumerable<Webbangame.Models.LIEN_HE>
+<p class="lead"></p>
+
+    <div class="list-group">
+        @foreach (var item in Model)
+        {
+
+            <div class="thumbnail" style="font-size:20px;float:right;background-color:black">
+             
+                <a class="glyphicon glyphicon-home">
+                    <a href="https://www.google.com/maps/place/Hutech+-+Đại+học+công+nghệ+cơ+sở+E/10.8554923,106.7835532,17z/data=!3m1!4b1!4m5!3m4!1s0x3175276dcce73e4b:0x860e9c892963d0e7!8m2!3d10.855487!4d106.7857419?hl=vi">@item.DC</a>
+
+
+                    <div class="glyphicon glyphicon-phone-alt" style="color:cornflowerblue">  @item.SĐT </div>
+                </a>
+                 
+
+
+
+                <span class="glyphicon glyphicon-user" style="color:cornflowerblue">   </span>
+                    <a href="https://www.facebook.com/ngocnguyen.cao.73">@item.FaceBook</a>
+             
+
+              
+         </div>
+
+
+        }
+    </div>

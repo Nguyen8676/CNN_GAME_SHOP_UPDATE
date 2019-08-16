@@ -1,0 +1,14 @@
+﻿@model  IEnumerable<Webbangame.Models.AVARTA>
+
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("Index","GameStore")" >
+            <img  src="~/Hinhsanpham/@item.LOGO" style="width:150px;font-weight:150px"/>
+                 
+        </a>
+
+    }
+
+ 
+
+

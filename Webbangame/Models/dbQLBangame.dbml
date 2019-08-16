@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLBANGAME" Class="dbQLBangameDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-HIRRU46\SQLEXPRESS;Initial Catalog=QLBANGAME;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLBANGAMEConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AVARTA" Member="AVARTAs">
+    <Type Name="AVARTA">
+      <Column Name="LOGO" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_DONHANG" Member="CT_DONHANGs">
+    <Type Name="CT_DONHANG">
+      <Column Name="MaDH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaGame" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Dongia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="DON_HANG_CT_DONHANG" Member="DON_HANG" ThisKey="MaGame" OtherKey="MaDH" Type="DON_HANG" IsForeignKey="true" />
+      <Association Name="GAME_CT_DONHANG" Member="GAME" ThisKey="MaGame" OtherKey="MaGame" Type="GAME" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DON_HANG" Member="DON_HANGs">
+    <Type Name="DON_HANG">
+      <Column Name="MaDH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MaGame" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dathanhtoan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Tinhtranggiaohang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ngaygiao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="DON_HANG_CT_DONHANG" Member="CT_DONHANGs" ThisKey="MaDH" OtherKey="MaGame" Type="CT_DONHANG" />
+      <Association Name="GAME_DON_HANG" Member="GAME" ThisKey="MaGame" OtherKey="MaGame" Type="GAME" IsForeignKey="true" />
+      <Association Name="KHACHHANG_DON_HANG" Member="KHACHHANG" ThisKey="MaKH" OtherKey="MaKH" Type="KHACHHANG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GAME" Member="GAMEs">
+    <Type Name="GAME">
+      <Column Name="MaGame" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaTheLoai" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenGame" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GiaBan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NgayCapNhat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Anhbia" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="MaNPH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaNPT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Mota" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="Soluongton" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GAME_CT_DONHANG" Member="CT_DONHANGs" ThisKey="MaGame" OtherKey="MaGame" Type="CT_DONHANG" />
+      <Association Name="GAME_DON_HANG" Member="DON_HANGs" ThisKey="MaGame" OtherKey="MaGame" Type="DON_HANG" />
+      <Association Name="NHA_PHAT_HANH_GAME" Member="NHA_PHAT_HANH" ThisKey="MaNPH" OtherKey="MaNPH" Type="NHA_PHAT_HANH" IsForeignKey="true" />
+      <Association Name="NHA_PHAT_TRIEN_GAME" Member="NHA_PHAT_TRIEN" ThisKey="MaNPT" OtherKey="MaNPT" Type="NHA_PHAT_TRIEN" IsForeignKey="true" />
+      <Association Name="THE_LOAI_GAME" Member="THE_LOAI" ThisKey="MaTheLoai" OtherKey="MaTheLoai" Type="THE_LOAI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
+    <Type Name="KHACHHANG">
+      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="KHACHHANG_DON_HANG" Member="DON_HANGs" ThisKey="MaKH" OtherKey="MaKH" Type="DON_HANG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LIEN_HE" Member="LIEN_HEs">
+    <Type Name="LIEN_HE">
+      <Column Name="SĐT" Type="System.String" DbType="Char(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FaceBook" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHA_PHAT_HANH" Member="NHA_PHAT_HANHs">
+    <Type Name="NHA_PHAT_HANH">
+      <Column Name="MaNPH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenNPH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="NHA_PHAT_HANH_GAME" Member="GAMEs" ThisKey="MaNPH" OtherKey="MaNPH" Type="GAME" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHA_PHAT_TRIEN" Member="NHA_PHAT_TRIENs">
+    <Type Name="NHA_PHAT_TRIEN">
+      <Column Name="MaNPT" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenNPT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="NHA_PHAT_TRIEN_GAME" Member="GAMEs" ThisKey="MaNPT" OtherKey="MaNPT" Type="GAME" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THE_LOAI" Member="THE_LOAIs">
+    <Type Name="THE_LOAI">
+      <Column Name="MaTheLoai" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTheLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="THE_LOAI_GAME" Member="GAMEs" ThisKey="MaTheLoai" OtherKey="MaTheLoai" Type="GAME" />
+    </Type>
+  </Table>
+</Database>

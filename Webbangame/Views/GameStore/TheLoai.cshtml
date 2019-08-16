@@ -1,0 +1,19 @@
+﻿@model  IEnumerable<Webbangame.Models.THE_LOAI>
+ <p class="lead">Thể Loại Game</p>
+<style>
+    .list-group-item:hover {
+        color:red;
+    }
+
+    .list-group-item {
+        background-color: black;
+    }
+</style>
+ <div class="list-group">
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("SPTheoTheLoai","GameStore",new {a=item.MaTheLoai })" class="list-group-item" style="color:cornflowerblue">
+            @item.TenTheLoai
+        </a>    
+    }
+</div>

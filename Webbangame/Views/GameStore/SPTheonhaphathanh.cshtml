@@ -1,0 +1,45 @@
+﻿
+
+@model IEnumerable<Webbangame.Models.GAME>
+@{
+    ViewBag.Title = "SPTheoNPH";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<h3 style="text-align:center;color:white">GAME THEO NPH</h3>
+<div class="row">
+    @foreach(var game in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail" style="background-color:black">
+                <a href="@Url.Action("Details", "GameStore", new { id=game.MaGame })">
+                <img alt="@game.TenGame" src="~/Hinhsanpham/@game.Anhbia" style="width:200px ;height:200px" class="cangiua" />
+                <div>
+                    <br />
+                    <h4 style="text-align:center">
+                        @game.TenGame
+                    </h4>
+                    <p></p>
+
+                </div>
+                <div class="ratings">
+                    <div>
+                        <p class="pull-right">15 reviews</p>
+                    </div>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </p>
+
+                </div>
+                    </a>
+
+            </div>
+
+       </div>
+    }
+</div>
+
+
